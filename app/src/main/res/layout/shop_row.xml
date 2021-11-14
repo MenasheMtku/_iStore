@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/shopProdImageId"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="2dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_baseline_add_cart_blue_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/shopProdNameId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:maxLines="1"
+        android:padding="2dp"
+        android:text="Product Name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toEndOf="@+id/shopProdImageId"
+        app:layout_constraintTop_toTopOf="@+id/shopProdImageId" />
+
+    <TextView
+        android:id="@+id/shopProdDescId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:maxLines="1"
+        android:padding="2dp"
+        android:text="Product Description"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="@+id/shopProdNameId"
+        app:layout_constraintTop_toBottomOf="@+id/shopProdNameId" />
+
+
+    <TextView
+        android:id="@+id/shopProdPriceTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+
+        android:maxLines="1"
+        android:text="Costs"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/shopAddToCartTv"
+        app:layout_constraintEnd_toStartOf="@+id/textView2" />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="2dp"
+        android:text="@string/israeliShekel"
+        app:layout_constraintBottom_toBottomOf="@+id/shopProdPriceTv"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/shopAddToCartTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:drawableStart="@drawable/ic_baseline_add_cart_blue_24"
+        android:gravity="center_vertical|bottom"
+        android:padding="2dp"
+        android:text="Add To Cart"
+        android:textColor="@color/wallet_holo_blue_light"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/shopProdImageId"
+        app:layout_constraintStart_toEndOf="@+id/shopProdImageId" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="2dp"
+
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shopProdImageId"
+        tools:ignore="MissingConstraints" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    android:layout_width="wrap_content"-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto">-->
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="120dp"-->
+    <!--        android:padding="6dp"-->
+    <!--        android:orientation="horizontal">-->
+
+    <!--        <RelativeLayout-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            app:cardCornerRadius="20dp">-->
+
+    <!--            <de.hdodenhof.circleimageview.CircleImageView-->
+    <!--                android:id="@+id/shopProdImageId"-->
+    <!--                android:layout_width="100dp"-->
+    <!--                android:layout_height="120dp"-->
+    <!--                android:padding="2dp"-->
+
+    <!--                android:scaleType="centerCrop"-->
+    <!--                android:src="@drawable/ic_baseline_add_cart_blue_24" />-->
+
+    <!--        </RelativeLayout>-->
+    <!--        <RelativeLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:padding="8dp">-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/shopProdNameId"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_alignParentTop="true"-->
+
+    <!--                android:maxLines="1"-->
+    <!--                android:padding="2dp"-->
+    <!--                android:text="Product Name"-->
+    <!--                android:textColor="@android:color/black" />-->
+
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/shopProdDescId"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_below="@id/shopProdNameId"-->
+    <!--                android:maxLines="1"-->
+    <!--                android:padding="2dp"-->
+    <!--                android:text="Product Description"-->
+    <!--                android:textColor="@android:color/black" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/shopProdPriceTv"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_alignParentEnd="true"-->
+    <!--                android:layout_alignParentBottom="true"-->
+    <!--                android:fontFamily="sans-serif-condensed-medium"-->
+    <!--                android:maxLines="1"-->
+    <!--                android:padding="5dp"-->
+    <!--                android:text="Costs"-->
+    <!--                android:textColor="@android:color/black"-->
+    <!--                android:textFontWeight="400" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/shopAddToCartTv"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_alignParentBottom="true"-->
+    <!--                android:drawableStart="@drawable/ic_baseline_add_cart_blue_24"-->
+    <!--                android:gravity="center_vertical"-->
+    <!--                android:padding="2dp"-->
+    <!--                android:text="Add To Cart"-->
+    <!--                android:textColor="@color/colorPrimaryDarkBlue" />-->
+
+
+    <!--        </RelativeLayout>-->
+
+
+    <!--    </LinearLayout>-->
+
+    <!--</androidx.cardview.widget.CardView>-->

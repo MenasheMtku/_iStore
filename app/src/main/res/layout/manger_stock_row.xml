@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="5dp">-->
+
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:padding="4dp">-->
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/cardImage_id"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:padding="2dp"
+        android:src="@drawable/ic_outline_prod_image_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/prodName_ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@id/cardImage_id"
+        android:fontFamily="sans-serif-medium"
+        android:maxLines="1"
+        android:text="@string/prod_name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toEndOf="@+id/cardImage_id"
+        app:layout_constraintTop_toTopOf="@+id/cardImage_id"
+        tools:ignore="RelativeOverlap" />
+
+    <TextView
+        android:id="@+id/itemCategoryTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/prodName_ID"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@id/cardImage_id"
+        android:maxLines="1"
+        android:text="Category"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/black"
+        android:textStyle="italic"
+        app:layout_constraintStart_toEndOf="@+id/cardImage_id"
+        app:layout_constraintTop_toBottomOf="@+id/prodName_ID" />
+
+<!--            <TextView-->
+<!--                android:id="@+id/prodDescId"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/itemCategoryTV"-->
+<!--                android:layout_marginStart="5dp"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:layout_toEndOf="@id/cardImage_id"-->
+<!--                android:maxLines="1"-->
+<!--                android:text="Desc"-->
+<!--                android:textColor="@android:color/black" />-->
+    <TextView
+        android:id="@+id/expiredTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inStockTv"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@id/cardImage_id"
+        android:text="Expires In: "
+        app:layout_constraintBottom_toBottomOf="@+id/cardImage_id"
+        app:layout_constraintStart_toEndOf="@+id/cardImage_id"
+        app:layout_constraintTop_toBottomOf="@+id/inStockTv" />
+
+    <TextView
+        android:id="@+id/prodExpiryCardTV_ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/expiredTv"
+        android:layout_marginStart="4dp"
+        android:layout_toEndOf="@id/expiredTv"
+        android:fontFamily="sans-serif"
+        android:text="dd/MM/yyyy"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/expiredTv"
+        app:layout_constraintStart_toEndOf="@+id/expiredTv" />
+
+    <TextView
+        android:id="@+id/inStockTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/itemCategoryTV"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@id/cardImage_id"
+        android:text="In Stock: "
+        app:layout_constraintStart_toEndOf="@+id/cardImage_id"
+        app:layout_constraintTop_toBottomOf="@+id/itemCategoryTV" />
+
+    <TextView
+        android:id="@+id/prodQtyCardTV_ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/prodExpiryCardTV_ID"
+        android:layout_alignBaseline="@id/inStockTv"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@id/inStockTv"
+        android:text="@string/product_quantity"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/inStockTv"
+        app:layout_constraintStart_toEndOf="@+id/inStockTv" />
+
+    <TextView
+        android:id="@+id/vendorTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/itemCategoryTV"
+        app:layout_constraintTop_toTopOf="@+id/itemCategoryTV" />
+
+    <!--        </RelativeLayout>-->
+
+<!--    </androidx.cardview.widget.CardView>-->
+</androidx.constraintlayout.widget.ConstraintLayout>

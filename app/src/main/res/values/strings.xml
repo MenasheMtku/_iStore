@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">iStore</string>
+    <string name="admin_name">Admin</string>
+    <string name="worker_name">Employee</string>
+    <string name="sure_text_pop">Are you sure ?</string>
+    <string name="pop_no_btn">No</string>
+    <string name="pop_yes_btn">Yes</string>
+    <string name="update_item">Update Item</string>
+    <string name="item_expiry_date_popup">Item Expiry Date</string>
+    <string name="item_quantity_popup">Item Quantity</string>
+    <string name="item_name_popup">Item Name</string>
+    <string name="btn_update_item_pop">Update Item</string>
+    <string name="item_name">Item_Name</string>
+    <string name="ProductUploaded">Uploaded Successfully</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="prod_name">Product Name</string>
+    <string name="product_quantity">#1</string>
+    <string name="all_products">All Products</string>
+    <string name="expired_items">Expired Items</string>
+    <string name="item_category">Category</string>
+    <string name="subtotal_payment">Subtotal</string>
+    <string name="discount_payment">Discount</string>
+    <string name="shipping_payment">Shipping</string>
+    <string name="dollar_sign"> $</string>
+    <string name="comma"> ,</string>
+    <string name="sign_in">Register</string>
+    <string name="login">Login</string>
+    <string name="create_account">Create Account</string>
+    <string name="price_quantity">Price * Quantity =</string>
+    <string name="item_quantity">Quantity = </string>
+    <string name="inserted_to_cart_on">Inserted to Cart On..</string>
+    <string name="total_price">Total Price</string>
+    <string name="total_qty">Total Quantity</string>
+    <string name="checkout_on">Checkout On:</string>
+    <string name="Category">Category</string>
+    <string name="select_category">Category</string>
+    <string name="israeliShekel">₪</string>
+    <string-array name="Item_Categories">
+        <item>Food</item>
+        <item>Beverages</item>
+        <item>Chocolates</item>
+        <item>Other</item>
+        <item>Pharmacy</item>
+        <item>Electronics</item>
+<!--        <item>Expiredable</item>-->
+    </string-array>
+</resources>

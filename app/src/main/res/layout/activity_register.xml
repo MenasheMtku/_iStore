@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register">
+
+    <TextView
+        android:id="@+id/signInTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aclonica"
+        android:text="@string/sign_in"
+        android:textColor="@color/purple_500"
+        android:textSize="38sp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent=".9" />
+
+    <EditText
+        android:id="@+id/registerName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/loginRegisterEdittext"
+        android:layout_marginTop="12dp"
+        android:hint="Full Name"
+        android:drawableStart="@drawable/custom_user_icom"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/signInTv"
+        app:layout_constraintStart_toStartOf="@+id/signInTv"
+        app:layout_constraintTop_toBottomOf="@+id/signInTv" />
+
+    <EditText
+        android:id="@+id/registerEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        style="@style/loginRegisterEdittext"
+        android:hint="Email Address"
+        android:drawableStart="@drawable/custom_email_icom"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/registerName"
+        app:layout_constraintStart_toStartOf="@+id/registerName"
+        app:layout_constraintTop_toBottomOf="@+id/registerName" />
+
+    <EditText
+        android:id="@+id/registerPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        style="@style/loginRegisterEdittext"
+        android:hint="Password"
+        android:drawableStart="@drawable/custom_lock_icom"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/registerEmail"
+        app:layout_constraintStart_toStartOf="@+id/registerEmail"
+        app:layout_constraintTop_toBottomOf="@+id/registerEmail" />
+
+    <EditText
+        android:id="@+id/registerPhone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        style="@style/loginRegisterEdittext"
+        android:hint="Phone Number"
+        android:inputType="phone"
+        android:minHeight="48dp"
+        android:drawableStart="@drawable/custom_phone_icom"
+        app:layout_constraintEnd_toEndOf="@+id/registerPassword"
+        app:layout_constraintStart_toStartOf="@+id/registerPassword"
+        app:layout_constraintTop_toBottomOf="@+id/registerPassword" />
+
+    <Button
+        android:id="@+id/registerBtn"
+        style="@style/loginbtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/create_account"
+        app:layout_constraintBottom_toTopOf="@+id/gotoLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent=".9" />
+
+    <Button
+        android:id="@+id/gotoLogin"
+        style="@style/loginbtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent=".9" />
+</androidx.constraintlayout.widget.ConstraintLayout>

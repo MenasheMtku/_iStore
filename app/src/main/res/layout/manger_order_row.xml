@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:cardBackgroundColor="#FFFEEE"
+    app:cardCornerRadius="10dp"
+    android:layout_marginTop="8dp"
+    app:cardElevation="3dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="4dp">
+
+        <TextView
+            android:id="@+id/cName_ID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Name: "
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/customer_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/roboto_slab_regular"
+            android:text="Customer Name"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toStartOf="@+id/checkBox_ordr_id"
+            app:layout_constraintStart_toEndOf="@+id/cName_ID"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/custAddressTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Address: "
+            app:layout_constraintStart_toStartOf="@+id/cName_ID"
+            app:layout_constraintTop_toBottomOf="@+id/cName_ID" />
+
+        <TextView
+            android:id="@+id/custAddressTv_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/roboto_slab_regular"
+            android:text="Address"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/customer_id"
+            app:layout_constraintStart_toEndOf="@+id/custAddressTv"
+            app:layout_constraintTop_toBottomOf="@+id/customer_id" />
+
+        <TextView
+            android:id="@+id/total_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/custAddressTv"
+            android:layout_marginTop="4dp"
+            android:text="Total Items: "
+            app:layout_constraintStart_toStartOf="@+id/custAddressTv"
+            app:layout_constraintTop_toBottomOf="@+id/custAddressTv" />
+
+        <TextView
+            android:id="@+id/totalItems_ID"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/roboto_slab_regular"
+            android:text="Total Items"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/custAddressTv_id"
+            app:layout_constraintStart_toEndOf="@+id/total_Tv"
+            app:layout_constraintTop_toBottomOf="@+id/custAddressTv_id" />
+
+        <TextView
+            android:id="@+id/timeOfOreder_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/customer_id"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/checkout_on"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/total_Tv"
+            app:layout_constraintTop_toBottomOf="@+id/total_Tv" />
+
+        <TextView
+            android:id="@+id/order_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/timeOfOreder_id"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:text="Time Ordered"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@android:color/black"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="@+id/totalItems_ID"
+            app:layout_constraintStart_toEndOf="@+id/timeOfOreder_id"
+            app:layout_constraintTop_toBottomOf="@+id/totalItems_ID" />
+
+        <CheckBox
+            android:id="@+id/checkBox_ordr_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Sent To Emp"
+            android:button="@null"
+            android:gravity="center"
+            android:layout_marginEnd="4dp"
+            android:drawableTop="?android:attr/listChoiceIndicatorMultiple"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

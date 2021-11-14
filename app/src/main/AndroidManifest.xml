@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.istore">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_store_foreground"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_store_foreground"
+        android:supportsRtl="false"
+        android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
+        android:name=".Model.MyApplication">
+        <activity
+            android:name=".Employee.ViewOrders"
+            android:exported="false" />
+        <activity
+            android:name=".Manager.OrderDetails"
+            android:exported="false" />
+        <activity
+            android:name=".User.UserPayment"
+            android:exported="false" />
+        <activity
+            android:name=".User.UserAddress"
+            android:exported="false" />
+        <activity
+            android:name=".User.AddAddress"
+            android:exported="false" />
+        <activity
+            android:name=".Manager.ReturnToVendor"
+            android:exported="true" />
+        <activity
+            android:name=".SplashScreen"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+
+<!--             <intent-filter>-->
+<!--             <action android:name="android.intent.action.MAIN" />-->
+<!--             <category android:name="android.intent.category.LAUNCHER" />-->
+<!--             </intent-filter>-->
+
+        </activity>
+        <activity
+            android:name=".Manager.OrderToStock"
+            android:exported="true" />
+        <activity
+            android:name=".Manager.CustomerOrders"
+            android:exported="true" />
+        <activity
+            android:name=".Employee.ViewStorage"
+            android:exported="true" />
+        <activity
+            android:name=".Manager.AllProducts"
+            android:exported="true" />
+        <activity
+            android:name=".User.UserCart"
+            android:exported="true" />
+        <activity
+            android:name=".Manager.EditProduct"
+            android:exported="true"
+            tools:ignore="MissingClass" />
+        <activity
+            android:name=".User.UserShop"
+            android:exported="true" />
+        <activity
+            android:name=".Login"
+            android:exported="true">
+
+             <intent-filter>
+             <action android:name="android.intent.action.MAIN" />
+
+
+             <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
+        </activity>
+        <activity
+            android:name=".Register"
+            android:exported="true" />
+        <activity
+            android:name=".Manager.ViewStock"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Employee.AddProduct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Employee.EmployeeDashboard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Manager.ManagerDashboard"
+            android:screenOrientation="portrait">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat"
+            tools:ignore="MissingClass" />
+    </application>
+
+</manifest>

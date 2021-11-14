@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Employee.AddProduct">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/editProductTb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_500"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:logo="@drawable/manager_icon_24_24"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="Edit Producs"
+        app:titleMarginStart="35dp" />
+
+
+    <ImageView
+        android:id="@+id/imageEditIv"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_outline_prod_image_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editProductTb"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/changeImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageEditIv"
+        app:layout_constraintStart_toEndOf="@+id/imageEditIv"
+        app:srcCompat="@drawable/ic_baseline_add_a_photo_24"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/editSwitch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:checked="false"
+        android:thumb="@drawable/thumb_selector"
+        app:track="@drawable/track_selector"
+        android:text="  Has Expiry"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageEditIv" />
+
+    <Spinner
+        android:id="@+id/editSpinnerCategory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="2dp"
+        android:background="@drawable/custom_edittext"
+        android:entries="@array/Item_Categories"
+        android:prompt="@string/Category"
+        app:layout_constraintEnd_toStartOf="@+id/editSpinnerVendor"
+        app:layout_constraintStart_toStartOf="@+id/editSwitch"
+        app:layout_constraintTop_toBottomOf="@+id/editSwitch"
+        tools:listitem="@layout/support_simple_spinner_dropdown_item" />
+
+    <Spinner
+        android:id="@+id/editSpinnerVendor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/custom_edittext"
+        app:layout_constraintEnd_toEndOf="@+id/editSwitch"
+        app:layout_constraintStart_toEndOf="@+id/editSpinnerCategory"
+        app:layout_constraintTop_toBottomOf="@+id/editSwitch"
+        tools:listitem="@layout/support_simple_spinner_dropdown_item" />
+
+    <EditText
+        android:id="@+id/etName"
+        style="@style/inputEdittext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+
+        android:hint="Product Name"
+        app:layout_constraintEnd_toEndOf="@+id/editSpinnerVendor"
+        app:layout_constraintStart_toStartOf="@+id/editSpinnerCategory"
+        app:layout_constraintTop_toBottomOf="@+id/editSpinnerCategory" />
+
+    <EditText
+        android:id="@+id/etPric"
+        style="@style/inputEdittext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="2dp"
+        android:hint="Price"
+        android:inputType="numberDecimal|number|numberSigned"
+        app:layout_constraintEnd_toStartOf="@+id/etQuantity"
+        app:layout_constraintStart_toStartOf="@+id/etName"
+        app:layout_constraintTop_toBottomOf="@+id/etName" />
+
+    <EditText
+        android:id="@+id/etQuantity"
+        style="@style/inputEdittext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="8dp"
+        android:hint="Quantity"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/etName"
+        app:layout_constraintStart_toEndOf="@+id/etPric"
+        app:layout_constraintTop_toBottomOf="@+id/etName" />
+
+    <EditText
+        android:id="@+id/etDescription"
+        style="@style/inputEdittext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Description"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/etQuantity"
+        app:layout_constraintStart_toStartOf="@+id/etPric"
+        app:layout_constraintTop_toBottomOf="@+id/etPric" />
+
+    <EditText
+        android:id="@+id/etExpDate"
+        style="@style/inputEdittext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:focusable="false"
+        android:hint="Expiry date"
+        android:inputType="date"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toStartOf="@+id/datePickImageView"
+        app:layout_constraintStart_toStartOf="@+id/etDescription"
+        app:layout_constraintTop_toBottomOf="@+id/etDescription" />
+
+    <ImageView
+        android:id="@+id/datePickImageView"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic__date_range"
+        app:layout_constraintBottom_toBottomOf="@+id/etExpDate"
+        app:layout_constraintEnd_toEndOf="@+id/etDescription"
+        app:layout_constraintTop_toBottomOf="@+id/etDescription" />
+
+    <!--    <RelativeLayout-->
+    <!--        android:id="@+id/relativeLayout"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:paddingTop="5dp"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/updateBtn"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintWidth_percent=".9"-->
+    <!--        tools:ignore="MissingConstraints">-->
+
+
+    <!--        <LinearLayout-->
+    <!--            android:id="@+id/llLenar_id"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:orientation="horizontal">-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/etCategory"-->
+    <!--                style="@style/inputEdittext"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:background="@drawable/custom_edittext"-->
+    <!--                android:drawableEnd="@drawable/ic_down_arrow_24"-->
+    <!--                android:hint="Category"-->
+    <!--                android:inputType="textCapSentences|textMultiLine" />-->
+
+
+    <!--        </LinearLayout>-->
+
+
+    <!--        <RelativeLayout-->
+    <!--            android:id="@+id/dateSection"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_below="@id/etDescription"-->
+    <!--            style="@style/inputEdittext"-->
+    <!--            android:background="@drawable/custom_edittext"-->
+    <!--            android:orientation="horizontal">-->
+
+
+    <!--        </RelativeLayout>-->
+
+
+    <!--        <Button-->
+    <!--            android:id="@+id/addImage"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_below="@id/dateSection"-->
+    <!--            android:layout_centerHorizontal="true"-->
+    <!--            android:layout_gravity="center"-->
+    <!--            android:layout_marginStart="5dp"-->
+    <!--            android:layout_marginTop="5dp"-->
+    <!--            android:layout_marginEnd="5dp"-->
+    <!--            android:layout_marginBottom="5dp"-->
+    <!--            android:padding="10dp"-->
+    <!--            android:text="Change Image"-->
+    <!--            android:textAllCaps="false"-->
+    <!--            android:textSize="20dp" />-->
+
+
+    <!--    </RelativeLayout>-->
+
+
+    <Button
+        android:id="@+id/updateBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="Update Item"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent=".9" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

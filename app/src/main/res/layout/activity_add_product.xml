@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Employee.AddProduct">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/addToStorageTb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_500"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:logo="@drawable/fui_ic_anonymous_white_24dp"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="Add Producs"
+        app:titleMarginStart="35dp" />
+
+
+    <ImageView
+        android:id="@+id/prodImageView"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="8dp"
+        android:contentDescription="TODO"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_outline_prod_image_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addToStorageTb" />
+
+    <ImageButton
+        android:id="@+id/addImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/prodImageView"
+        app:layout_constraintStart_toEndOf="@id/prodImageView"
+        app:srcCompat="@drawable/ic_baseline_add_a_photo_24"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prodImageView"
+        app:layout_constraintWidth_percent=".9"
+        tools:ignore="MissingConstraints">
+
+        <EditText
+            android:id="@+id/etName"
+            style="@style/inputEdittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:hint="Product Name"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_id" />
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/etCategory"-->
+        <!--            style="@style/inputEdittext"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_below="@id/etName"-->
+        <!--            android:background="@drawable/custom_edittext"-->
+        <!--            android:drawableEnd="@drawable/ic_down_arrow_24"-->
+        <!--            android:hint="Category"-->
+        <!--            android:inputType="none"-->
+        <!--            tools:layout_editor_absoluteX="16dp"-->
+        <!--            tools:layout_editor_absoluteY="88dp" />-->
+
+        <Spinner
+            android:id="@+id/spinner_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/custom_edittext"
+            android:entries="@array/Item_Categories"
+            android:prompt="@string/Category"
+            app:layout_constraintEnd_toStartOf="@+id/spinner_vendor"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switch1" />
+
+        <Spinner
+            android:id="@+id/spinner_vendor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/custom_edittext"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/spinner_id"
+            app:layout_constraintTop_toBottomOf="@+id/switch1"
+            tools:listitem="@layout/support_simple_spinner_dropdown_item" />
+
+        <EditText
+            android:id="@+id/etQuantity"
+            style="@style/inputEdittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:hint="Quantity"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etName" />
+
+
+        <EditText
+            android:id="@+id/etExpiredDate"
+            style="@style/inputEdittext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:focusable="false"
+            android:hint="Expiry date"
+            android:inputType="date"
+            android:minHeight="48dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/datePickImageView"
+            app:layout_constraintStart_toStartOf="@+id/etQuantity"
+            app:layout_constraintTop_toBottomOf="@+id/etQuantity" />
+
+        <ImageView
+            android:id="@+id/datePickImageView"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_alignBottom="@id/etExpiredDate"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic__date_range"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/etExpiredDate"
+            app:layout_constraintEnd_toEndOf="@+id/etQuantity"
+            app:layout_constraintTop_toTopOf="@+id/etExpiredDate" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:checked="false"
+            android:text="  Has Expiry"
+            android:textSize="18dp"
+            android:thumb="@drawable/thumb_selector"
+            app:track="@drawable/track_selector"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+             />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/saveBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="Save Item"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent=".9" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
